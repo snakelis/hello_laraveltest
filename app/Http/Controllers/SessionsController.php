@@ -24,7 +24,6 @@ class SessionsController extends Controller
 
     public function store(Request $request)
     {
-        print_r($request->has('remember'));die;
         $this->validate($request, [
             'email' => 'required|email|max:255',
             'password' => 'required'
