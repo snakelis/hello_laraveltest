@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,6 +13,12 @@ class SessionsController extends Controller
     public function create()
     {
         return view('sessions.create');
+    }
+
+
+    public function show(User $user)
+    {
+        return view('users.show',compact('user'));
     }
 
 
